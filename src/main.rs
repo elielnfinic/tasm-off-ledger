@@ -22,7 +22,9 @@ fn main() {
         push 2 eq
         skiz
             call decrease_balance
-        halt
+        halt 
+
+        
 
 
         increase_balance : 
@@ -32,7 +34,9 @@ fn main() {
             return 
         
         decrease_balance :
-            sub
+            swap 1
+            invert
+            add
             write_io 1
             return 
 

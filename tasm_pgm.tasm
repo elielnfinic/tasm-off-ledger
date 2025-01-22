@@ -1,0 +1,22 @@
+read_io 3
+        dup 0
+        push 1 eq
+        skiz
+            call increase_balance 
+        push 2 eq
+        skiz
+            call decrease_balance
+        halt
+
+
+        increase_balance : 
+            pop 1
+            add
+            write_io 1
+            return 
+        
+        decrease_balance :
+            invert
+            add
+            write_io 1
+            return 
